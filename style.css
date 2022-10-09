@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Epilogue", sans-serif;
+  background: #28293e;
+}
+.page {
+  margin: auto;
+}
+
+/* Header */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5vw;
+}
+p {
+  font-weight: 400;
+  font-size: 2rem;
+  color: #bbb3e5;
+  line-height: 4.8rem;
+  padding-top: 3rem;
+  animation: myAnim 2s ease 0s 1 normal forwards;
+}
+h1 {
+  font-weight: 800;
+  font-size: 4rem;
+  color: #fff;
+  padding-bottom: 9vw;
+  animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+/* Main */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h2 {
+  font-weight: 800;
+  font-size: 4rem;
+  color: #fff;
+  position: absolute;
+  bottom: 5.2rem;
+  left: 2.8rem;
+}
+span {
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #090039;
+  background-color: #fff;
+  padding: 1.6rem;
+  border-radius: 2.6rem;
+  display: block;
+  width: fit-content;
+  margin-bottom: 3rem;
+}
+.card {
+  position: relative;
+  margin-bottom: 5vw;
+  animation: myAnim 2s ease 0s 1 normal forwards;
+  padding: 3vw;
+  margin: auto;
+}
+img {
+  width: 35rem;
+  height: 45rem;
+  opacity: 0.7;
+  border-radius: 3rem;
+}
+
+@keyframes myAnim {
+  0% {
+    opacity: 0;
+    transform: translateY(-250px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 700px) {
+  body {
+    padding: 2vw;
+  }
+  main {
+    display: grid;
+    grid-template-areas: "A C" "B D";
+  }
+  main div:nth-child(1) {
+    grid-area: A;
+  }
+
+  main div:nth-child(2) {
+    grid-area: B;
+  }
+
+  main div:nth-child(3) {
+    grid-area: C;
+  }
+
+  main div:nth-child(4) {
+    grid-area: D;
+  }
+
+  /* Header */
+  p {
+    line-height: 1.3rem;
+  }
+  h1 {
+    padding-bottom: 3vw;
+  }
+
+  /* Main */
+  .card {
+    transition: transform 200ms;
+  }
+
+  .card:hover {
+    transform: scale(1.1);
+  }
+  h2 {
+    bottom: 7rem;
+    left: 7rem;
+  }
+}
